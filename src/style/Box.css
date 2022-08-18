@@ -1,0 +1,24 @@
+.box{
+    border-radius: 1em;
+    background-color: hsl(33, 100%, 98%);
+    grid-row: 2/10;
+    padding: 0 10px;
+
+}
+
+.box1{
+    grid-column:10/15;
+    list-style: none;
+}
+.box2{
+    display: none;
+    grid-column: 10/15;
+}
+
+.justifySB{
+    justify-content: space-between;
+}
+
+.flex{
+    display: flex;
+}
