@@ -4,35 +4,42 @@ import '../style/Box.css'
 
 export default ({clas, data}) => {
 
-    const showExpenses = () => {
+    let total = 0
 
-        if (data) {
-            return ( data.map ( 
-                item => {
-                    return (
-                        <div className='justifySB flex '>
-                            <p>{item.amount}</p>
-                            <p>{item.discription}</p>
-                            <p>{item.catagory}</p>
-                        </div>
-                    )
-                }
-            ))
-            
-        }
+    const showExpenses = () => {
+            return (
+                data.map ( 
+                    (item, index) => {
+                        total += item.amount
+                        return (
+                            <div className='justifySB flex' key={index}>
+                                <p>{item.amount}</p>
+                                <p>{item.description}</p>
+                                <p>{item.catagory}</p>
+                            </div>
+                        )
+                    }
+                )
+            )
     } 
 
     return (
         <div className={` box ${clas}`} >
-
+ 
             <div className='justifySB flex center'>
 
                 <h3>Amount</h3>
-                <h3>Discription</h3>
+                <h3>Description</h3>
                 <h3>Category</h3>
             </div>
             
             {showExpenses()}
+
+            <div className='justifySB flex'>
+                <h2> {total} </h2>
+                <h2>Total</h2>
+                {/* <h2></h2> */}
+            </div>
 
         </div>
     )

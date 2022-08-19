@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import React, {useState} from 'react'
 
 import './style/App.css'
@@ -9,19 +10,19 @@ import BarGraph from './components/BarGraph'
 
 export default () => {
     const [expenseData, addExpenseData] = useState([
-        {amount: 23, discription: 'Takeout', catagory: 'Food'},
-        {amount: 354, discription: 'Electricity Bill', catagory:'Utility'},
-        {amount: 98, discription: 'Travel Pass', catagory:'Transport'},
-        {amount: 900, discription: 'Rent', catagory:'Housing'},
-        {amount: 60, discription: 'Bought game', catagory:'Personal'},
-        {amount: 400, discription: 'Groceries', catagory:'Food'},
-        {amount: 120, discription: 'Water Bill', catagory:'Utility'},
-        {amount: 560, discription: 'Petrol', catagory:'Transport'},
-        {amount: 350, discription: 'Home Comodities', catagory:'Personal'},
-        {amount: 90, discription: 'Repair', catagory:'Housing'},
-        {amount: 135, discription: 'Dine out', catagory:'Food'},
-        {amount: 232, discription: 'Dog Food', catagory:'Misc'},
-        {amount: 80, discription: 'Medicine', catagory:'Misc'},
+        {amount: 23, description: 'Takeout', catagory: 'Food'},
+        {amount: 354, description: 'Electricity Bill', catagory:'Utility'},
+        {amount: 98, description: 'Travel Pass', catagory:'Transport'},
+        {amount: 900, description: 'Rent', catagory:'Housing'},
+        {amount: 60, description: 'Bought game', catagory:'Personal'},
+        {amount: 400, description: 'Groceries', catagory:'Food'},
+        {amount: 120, description: 'Water Bill', catagory:'Utility'},
+        {amount: 560, description: 'Petrol', catagory:'Transport'},
+        {amount: 350, description: 'Home Comodities', catagory:'Personal'},
+        {amount: 90, description: 'Repair', catagory:'Housing'},
+        {amount: 135, description: 'Dine out', catagory:'Food'},
+        {amount: 232, description: 'Dog Food', catagory:'Misc'},
+        {amount: 80, description: 'Medicine', catagory:'Misc'},
     ])
 
     let handleSubmit = e => {
@@ -29,7 +30,7 @@ export default () => {
 
         // console.log(e.target[2].value)
 
-        let arr = {amount: parseInt(e.target[0].value), discription:e.target[1].value, catagory: e.target[2].value }
+        let arr = {amount: parseInt(e.target[0].value), description:e.target[1].value, catagory: e.target[2].value }
         addExpenseData( expenseData => [...expenseData, arr])
 
         document.querySelector('form').reset()
