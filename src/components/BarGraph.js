@@ -22,12 +22,12 @@ export default ({data}) => {
 
     return (
         <div className='graph '>
-            <div className='food bar' style ={{height: categoryTotal.Food}} > Food</div>
+            <div className='food bar'     style ={{height: categoryTotal.Food}} > Food</div>
             <div className='housing bar'  style ={{height: categoryTotal.Housing}}> Housing</div>
-            <div className='travel bar' style ={{height: categoryTotal.Transport}}> Travel</div>
-            <div className='utils bar' style ={{height: categoryTotal.Utility}}> Utilities</div>
+            <div className='travel bar'   style ={{height: categoryTotal.Transport}}> Travel</div>
+            <div className='utils bar'    style ={{height: categoryTotal.Utility}}> Utilities</div>
             <div className='personel bar' style ={{height: categoryTotal.Personal}}>Personal</div>
-            <div className='misc bar' style ={{height: categoryTotal.Misc}}>Misc</div>
+            <div className='misc bar'     style ={{height: categoryTotal.Misc}}>Misc</div>
 
         </div>
     )
