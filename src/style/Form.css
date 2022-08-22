@@ -9,7 +9,7 @@
 select{
     width: 24em;
     height: 2em;
-    margin: -1em 4em;
+    margin: 0.7em 4em;
 }
 
 input {
@@ -19,6 +19,7 @@ input {
     width: 15em;
     border-radius: 2em;
     height: 3em;
+    margin: 0 5em;
 }
 .corner{
     padding: 4px;
